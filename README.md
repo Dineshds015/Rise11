@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Claim Form Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple claim form application built using React. This project allows users to file a claim by providing necessary details like claim value, contract value, place, language, and uploading required documents. It features a responsive layout with a sidebar, navbar, progress bar, and form fields for uploading files.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Responsive Design**: The application is fully responsive, adapting to different screen sizes using Tailwind CSS.
+- **Progress Bar**: A progress bar that tracks the user's progress through the form.
+- **Claim Form**: Users can input claim values, contract values, and upload relevant documents (e.g., contracts, agreements).
+- **File Upload**: Supports file uploads with validation for maximum file size and type (PDF).
+- **Multi-step Form**: Users can complete the form in multiple steps with visual feedback.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone the repository
 
-### `npm test`
+```bash
+git clone https://github.com/your-username/claim-form-app.git
+```
+### 2. Navigate to the project directory
+```bash
+cd claim-form-app
+```
+### 3. Install dependencies
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Start the development server
+```bash
+npm start
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Explanation of Sections:
+- **Features**: Briefly describes the main features of the project.
+- **Installation**: Instructions on how to install and run the project locally.
+- **Technologies Used**: Lists the key technologies that were used to build the app.
+- **Folder Structure**: Provides an overview of the project structure for easy navigation.
+- **How to Contribute**: A basic guide on how others can contribute to the project.
+- **License**: Specifies the licensing information, which can be modified based on your preferences.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can customize the content of the README to reflect the specific details of your project, such as changing the repository URL and adding any other relevant sections if needed.
