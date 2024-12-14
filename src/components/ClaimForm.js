@@ -5,17 +5,16 @@ import { faCalculator, faLocationDot, faLanguage, faReceipt, faFileContract, faF
 const ClaimForm = () => {
     const currencies = ["USD", "EUR", "GBP", "INR", "JPY", "AUD", "CAD", "CHF", "CNY"];
 
-    // Separate state variables for each dropdown
     const [contractCurrency, setContractCurrency] = React.useState("USD");
     const [claimCurrency, setClaimCurrency] = React.useState("USD");
+
     return (
         <div className="p-6 bg-white shadow-md rounded-md">
             <h2 className="text-xl font-semibold mb-4">File your Claim. (Approx 5 Minutes)</h2>
-            {/* Horizontal Line */}
-            <div className="border-t border-gray-300 my-4"></div>  {/* Adds a horizontal line */}
+            <div className="border-t border-gray-300 my-4"></div>
 
             {/* First Row: Claim Value, Place, Language */}
-            <div className="grid grid-cols-3 gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
                 <div>
                     <label className="block text-gray-700 text-xl font-semibold mb-1">
                         <FontAwesomeIcon icon={faCalculator} style={{ color: "#74C0FC" }} />
@@ -30,7 +29,6 @@ const ClaimForm = () => {
                                     placeholder="10,00,00 USD"
                                     className="w-full bg-gray-100 rounded-md p-2"
                                 />
-                                {/* Dropdown */}
                                 <select
                                     value={contractCurrency}
                                     onChange={(e) => setContractCurrency(e.target.value)}
@@ -45,7 +43,6 @@ const ClaimForm = () => {
                             </div>
                         </div>
 
-                        {/* Claim Value */}
                         <div>
                             <label className="block text-sm text-gray-500 font-semibold mb-1">Claim Value</label>
                             <div className="flex">
@@ -54,7 +51,6 @@ const ClaimForm = () => {
                                     placeholder="10,00,00 USD"
                                     className="w-full bg-gray-100 rounded-md p-2"
                                 />
-                                {/* Dropdown */}
                                 <select
                                     value={claimCurrency}
                                     onChange={(e) => setClaimCurrency(e.target.value)}
@@ -84,7 +80,6 @@ const ClaimForm = () => {
                     />
                     <p className="text-m text-gray-700 pt-6 mb-4">Is the place for the proceeding the one mentioned in the agreement?</p>
 
-                    {/* Radio Buttons */}
                     <div className="flex space-x-6">
                         <label className="flex items-center">
                             <input type="radio" name="place" value="yes" className="mr-2" />
@@ -95,7 +90,6 @@ const ClaimForm = () => {
                             No
                         </label>
                     </div>
-
                 </div>
 
                 <div>
@@ -109,24 +103,23 @@ const ClaimForm = () => {
                         className="w-full bg-gray-100 rounded-md p-2"
                     />
                     <p className="text-m text-gray-700 mb-4 pt-6">Is the Language for the proceeding the one mentioned in the agreement?</p>
-                    {/* Radio Buttons */}
                     <div className="flex space-x-6">
                         <label className="flex items-center">
-                            <input type="radio" name="place" value="yes" className="mr-2" />
+                            <input type="radio" name="language" value="yes" className="mr-2" />
                             Yes
                         </label>
                         <label className="flex items-center">
-                            <input type="radio" name="place" value="no" className="mr-2" />
+                            <input type="radio" name="language" value="no" className="mr-2" />
                             No
                         </label>
                     </div>
                 </div>
             </div>
 
-            <div className="border-t border-gray-300 my-4"></div>  {/* Adds a horizontal line */}
+            <div className="border-t border-gray-300 my-4"></div>
 
             {/* Second Row: Statement, Agreement under Disputes, Additional Documents */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div>
                     <label className="block text-xl text-gray-700 font-semibold mb-1">
                         <FontAwesomeIcon icon={faReceipt} style={{ color: "#74C0FC" }} />
@@ -149,12 +142,10 @@ const ClaimForm = () => {
                                 id="file-upload"
                                 type="file"
                                 className="hidden"
-                                onChange={(e) => console.log(e.target.files)} // Handle the file upload logic here
+                                onChange={(e) => console.log(e.target.files)}
                             />
                         </div>
-
                     </div>
-
                 </div>
 
                 <div>
@@ -163,8 +154,7 @@ const ClaimForm = () => {
                         <span className="ml-2">Agreement under Disputes</span>
                     </label>
                     <div className="flex justify-between space-x-4">
-                        {/* First Upload Container */}
-                        <div className="flex items-center justify-center border-dashed border-2 bg-blue-100 border-blue-300 p-4 w-1/2">
+                        <div className="flex items-center justify-center border-dashed border-2 bg-blue-100 border-blue-300 p-4 w-full sm:w-1/2">
                             <label htmlFor="file-upload" className="cursor-pointer flex flex-col items-center justify-center text-center">
                                 <div className="mb-2">
                                     <FontAwesomeIcon icon={faCloudArrowUp} style={{ color: "#2563eb" }} className="text-3xl" />
@@ -176,12 +166,11 @@ const ClaimForm = () => {
                                 id="file-upload-contract"
                                 type="file"
                                 className="hidden"
-                                onChange={(e) => console.log(e.target.files)} // Handle file upload logic
+                                onChange={(e) => console.log(e.target.files)}
                             />
                         </div>
 
-                        {/* Second Upload Container */}
-                        <div className="flex items-center justify-center border-dashed bg-blue-100 border-blue-300  border-2 p-4 w-1/2">
+                        <div className="flex items-center justify-center border-dashed bg-blue-100 border-blue-300 border-2 p-4 w-full sm:w-1/2">
                             <label htmlFor="file-upload" className="cursor-pointer flex flex-col items-center justify-center text-center">
                                 <div className="mb-2">
                                     <FontAwesomeIcon icon={faCloudArrowUp} style={{ color: "#2563eb" }} className="text-3xl" />
@@ -189,16 +178,14 @@ const ClaimForm = () => {
                                 <div className="ml-2 text-black font-semibold">Arbitration Agreement</div>
                                 <div className="ml-2 text-sm text-blue-600">Max 2MB, PDF</div>
                             </label>
-
                             <input
                                 id="file-upload-agreement"
                                 type="file"
                                 className="hidden"
-                                onChange={(e) => console.log(e.target.files)} // Handle file upload logic
+                                onChange={(e) => console.log(e.target.files)}
                             />
                         </div>
                     </div>
-
                 </div>
 
                 <div>
@@ -237,10 +224,8 @@ const ClaimForm = () => {
                             />
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     );
 };
