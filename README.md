@@ -1,4 +1,4 @@
-# Claim Form Application
+# Rise11 - jur
 
 A simple claim form application built using React. This project allows users to file a claim by providing necessary details like claim value, contract value, place, language, and uploading required documents. It features a responsive layout with a sidebar, navbar, progress bar, and form fields for uploading files.
 
